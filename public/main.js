@@ -4,4 +4,4 @@
 // import { api } from './public/request.js';
 
 
-window.onload = api();
+// window.onload = api();
