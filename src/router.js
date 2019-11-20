@@ -9,4 +9,4 @@ const router = (request, response) => {
 }
 
 
-module.exports = handler;
+// module.exports = handler;

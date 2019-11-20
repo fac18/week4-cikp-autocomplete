@@ -9,7 +9,7 @@ const handleHome = (request, response) => {
         if(error) {
             console.log(error);
             response.writeHead(500, {'Content-Type': 'text/html'});
-            response.end("<h1>Sorry, a dinosaur ate our server :(</h1>");
+            response.end("<h1>Sorry, a dinosaur ate our server :( 🦕 </h1>");
         } else {
             response.writeHead(200, {'Content-Type': 'text/html'});
             response.end(file);
