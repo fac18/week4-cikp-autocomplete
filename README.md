@@ -1,1 +1,3 @@
-# week4-cikp-autocomplete
+# Week 4 CIKP Autocomplete project
+
+---
