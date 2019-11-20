@@ -1,0 +1,30 @@
+{
+  "name": "week4-cikp-autocomplete",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "nodemon test/tests.js | tap-spec",
+    "cover": "nyc tape test/tests.js | tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fac18/week4-cikp-autocomplete.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fac18/week4-cikp-autocomplete/issues"
+  },
+  "homepage": "https://github.com/fac18/week4-cikp-autocomplete#readme",
+  "devDependencies": {
+    "nodemon": "^1.19.4",
+    "nyc": "^14.1.1",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.11.0"
+  }
+}
