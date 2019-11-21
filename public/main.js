@@ -15,9 +15,7 @@ const createList = () => {
     })
 }
 
-const killAllChildren = () => {    
-    console.log("Killing all children");
-    console.log("Here are children: ", children);
+const killAllChildren = () => {
     while (suggestions.firstChild) {
         suggestions.removeChild(suggestions.firstChild);
     }
@@ -26,6 +24,7 @@ const killAllChildren = () => {
 const selectAutocomplete = (event) => {
     searchValue = event.target.textContent;
     inputBox.value = searchValue;
+    api();
 }
 
 // produce result upon submit
