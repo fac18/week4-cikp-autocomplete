@@ -70,8 +70,35 @@ const handleSearch = (request, response, endpoint) => {
     response.end(JSON.stringify(result));
 }
 
+
+const handleSubmit = (request, response, endpoint) => {
+    console.log({endpoint});
+    let finalCountry = endpoint.split('=')[1];
+    finalCountry = decodeURI(finalCountry)
+    console.log("final country ", finalCountry);
+    let finalDish = countryDish[finalCountry];
+    console.log(finalDish);
+
+
+    // If the endpoint given into the api request function includes the word search... 
+    // ...then the search url should come here as e.g. /search?q=germany
+    // We need to take only the part of the search term after the q. (querystrings?)
+    // Then we need to send that term into country-dish and somehow filter it for... 
+    // ...anything matching the search term.
+    // Possibly with filter(Object.keys(countryDish))...
+    // Then we need to JSON stringify that result so it can be passed back...
+    // ...as a response to the API and front end for DOM manipulation.
+    response.writeHead(200, { "content-type": "application/json" });
+    response.end(JSON.stringify(finalDish));
+}
+
+
+
+
+
 module.exports = {
     handleHome,
     handleAll,
-    handleSearch
+    handleSearch,
+    handleSubmit
 };

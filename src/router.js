@@ -12,7 +12,9 @@ const router = (request, response) => {
         handlers.handleAll(request, response);
     }else if (endpoint.includes('/search')) {
         handlers.handleSearch(request, response, endpoint);
-    } else {
+    }else if (endpoint.includes('/submit')) {
+        handlers.handleSubmit(request, response, endpoint);
+    }else {
         response.writeHead(404);
         response.end('404 not found');
     }

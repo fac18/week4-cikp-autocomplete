@@ -2,7 +2,8 @@
 // inputBox is our search bar. It waits for an input and runs api function each time.
 const inputBox = document.querySelector('input[name="autocomplete"]');
 let currentMatches = [];
-
+let finalInput = document.querySelector(".input-field");
+let finalDish;
 
 const api = () => {
     if (inputBox.value === "") {
@@ -32,3 +33,28 @@ const api = () => {
 };
 
 inputBox.addEventListener("input", api);
+
+    const apiDish = () => {
+        let country = finalInput.value;
+        let xhr = new XMLHttpRequest();
+        let submittedCountry = "/submit=" + country;
+        console.log(country);
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                // Response comes back so...
+                // Populate the currentmatches array with parsed response
+                console.log("finaldish in request: ", finalDish);
+                finalDish = JSON.parse(xhr.responseText);
+                console.log(finalDish);
+                createCountryDish(finalDish);
+            }
+        };
+        // Send the search term over to our server
+        xhr.open("GET", submittedCountry, true);
+        xhr.send();
+    }
+    
+
+// event listener for submit button click
+const searchBtn = document.querySelector(".search-btn");
+searchBtn.addEventListener('click', apiDish);
