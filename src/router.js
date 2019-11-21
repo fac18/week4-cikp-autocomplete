@@ -4,7 +4,7 @@ const handlers = require('./handlers.js');
 
 const router = (request, response) => {
     const endpoint = request.url;
-    console.log(endpoint);
+    // console.log(endpoint);
     // IF ELSE STATEMENT GOES HERE
     if(endpoint === '/') {
         handlers.handleHome(request, response);
@@ -16,5 +16,5 @@ const router = (request, response) => {
     }
 }
 
-
 module.exports = router;
+
