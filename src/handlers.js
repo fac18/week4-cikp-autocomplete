@@ -43,9 +43,24 @@ const handleAll = (request, response) => {
             }
         });
         // console.log(endpoint);
-        }
+}
+
+const handleSearch = (request, response) => {
+    // If the endpoint given into the api request function includes the word search... 
+    // ...then the search url should come here as e.g. /search?q=germany
+    // We need to take only the part of the search term after the q. (querystrings?)
+    // Then we need to send that term into country-dish and somehow filter it for... 
+    // ...anything matching the search term.
+    // Then we need to JSON stringify that result so it can be passed back...
+    // ...as a response to the API and front end for DOM manipulation.
+
+
+    response.writeHead(200, { "content-type": "application/json" });
+    response.end(JSON.stringify(result));
+}
 
 module.exports = {
     handleHome,
-    handleAll
+    handleAll,
+    handleSearch
 };
