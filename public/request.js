@@ -1,4 +1,4 @@
-
+// const handleSearch = require('./handlers.js');
 // inputBox is our search bar. It waits for an input and runs api function each time.
 const inputBox = document.querySelector('input[name="autocomplete"]');
 let currentMatches = [];
@@ -10,6 +10,7 @@ const api = () => {
     let xhr = new XMLHttpRequest();
     // make a file path using the search prefix and our input value
     let updatedSearch = "/search?q=" + currentInput;
+    console.log(updatedSearch);
     xhr.onreadystatechange = () => {
         if (xhr.readyState == 4 && xhr.status == 200) {
             // Response comes back so...
@@ -25,5 +26,10 @@ const api = () => {
     xhr.send();
 };
 
+<<<<<<< HEAD
 inputBox.addEventListener("input", api);
 
+||||||| merged common ancestors
+=======
+inputBox.addEventListener("input", api);
+>>>>>>> master
