@@ -191,7 +191,7 @@ const countryDish = {
 "Ukraine": "Borscht",
 "United Arab Emirates": "Harees",
 "United Kingdom": "Fish and chips",
-"United States": "Apple pie",
+"United States of America": "Apple pie",
 "Hawaii": "Poke",
 "Puerto Rico": "Arroz con gandules",
 "United States Virgin Islands": "Fish and cou-cou",

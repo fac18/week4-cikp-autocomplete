@@ -50,11 +50,14 @@ const handleAll = (request, response) => {
 const handleSearch = (request, response, endpoint) => {
     console.log({endpoint});
     let searchStr = endpoint.split('=')[1];
-    console.log("this is search field", searchStr);
+    searchStr = decodeURI(searchStr)
+    console.log("this is search str", searchStr);
     let countryArr = Object.keys(countryDish);
     // console.log('this is array', countryArr);
-    let result = countryArr.filter(country => country.toLowerCase().includes(searchStr));
+    let result = countryArr.filter(country => country.toLowerCase().startsWith(searchStr));
     console.log(result);
+
+
     // If the endpoint given into the api request function includes the word search... 
     // ...then the search url should come here as e.g. /search?q=germany
     // We need to take only the part of the search term after the q. (querystrings?)
