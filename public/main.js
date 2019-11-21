@@ -1,6 +1,8 @@
 // const inputBox = document.querySelector('input[name="autocomplete"]');
 const suggestions = document.querySelector(".suggestions");
 const children = document.getElementsByTagName("li");
+const countryDishSection = document.querySelector(".country-dish");
+let countrySubmitted = document.querySelector(".input-field");
 
 const createList = () => {
     killAllChildren();
@@ -25,3 +27,15 @@ const selectAutocomplete = (event) => {
     searchValue = event.target.textContent;
     inputBox.value = searchValue;
 }
+
+// produce result upon submit
+const createCountryDish = () => {
+        let finalCountry = countrySubmitted.value;
+        let paraCountryDish = document.createElement("p");
+        let nodePara = document.createTextNode(finalCountry + "'s national dish is " + finalDish);
+        paraCountryDish.appendChild(nodePara);
+        countryDishSection.appendChild(paraCountryDish);
+    }
+
+
+

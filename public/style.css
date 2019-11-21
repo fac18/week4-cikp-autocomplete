@@ -81,7 +81,7 @@ h2 {
 input {
     font-family: var(--raleway);
     font-size: var(--space-m);
-    color: var(--glass);
+    color: var(--blueberry);
     /*width: 60vw;*/
     line-height: var(--space-m);
     cursor: text;
