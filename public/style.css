@@ -88,10 +88,6 @@ input {
     vertical-align: middle;
 }
 
-input:focus {
-    transform: scale(1.2);
-}
-
 button {
     background: var(--blueberry);
     border: none;
