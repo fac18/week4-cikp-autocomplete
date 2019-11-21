@@ -7,14 +7,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Autocomplete</title>
     <link rel="stylesheet" type="text/css" href="/public/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,800|Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9de7c8a110.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>Country-Dish Autocomplete</h1>
+    <main>
+    <h1>WTF: Where's The Food? 🍋</h1>
+    <h2>Discover the national dishes of the countries of the world</h2>
     <form action="" aria-label="autocomplete country-dish search">
-        <input type="text" name="autocomplete" aria-label="text field" placeholder="Enter your search here">
-        <input type="submit" value="Search" aria-label="search button field">
+        <input type="text" name="autocomplete" aria-label="text field" placeholder="Search for a country" required>
+        <button type="submit" aria-label="search button">
+            <i class="fas fa-search"></i>
+        </button>
     </form> 
-    
+    </main>
+
     <script src="/public/countryDish.json"></script>
     <script src="/public/request.js"></script>
     <script src="/public/main.js"></script>

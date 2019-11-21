@@ -1,11 +1,126 @@
+:root {
+    /* colour variables */ 
+    --glass: #b5d7bb;
+    --blueberry: #284465;
+    --yelliced: #f2d655;
+    --mystic: #78f06d;
+    --go: #49ca3e;
+    --whiteout: white;
+
+    /* spacing variables: golden ratio */
+    --space-xs: 0.382rem;
+    --space-s: 0.618rem;
+    --space-m: 1rem;
+    --space-l: 1.618rem;
+    --space-xl: 2.618rem;
+    --space-xxl: 4.236rem;
+    /* Fonts  */
+    --raleway: 'Raleway', sans-serif;
+    --roboto: 'Roboto', sans-serif;
+}
+
 * {
     box-sizing: border-box;
 }
 
-html, body {
-    border: 0;
-    padding: 0;
-    margin: 0;
-    background-color: pink;
+html {
+    scroll-behavior: smooth;
 }
 
+body {
+    border: 0;
+    padding: 0;
+    margin: var(--space-l);
+    background: var(--blueberry);
+    min-height: 100vh;
+    /* min-width: 100vw; */
+    /* max-width: 18rem; */
+    display: flex;
+    flex-flow: column nowrap;
+    position: relative;
+    color: whitesmoke;
+    font-family: var(--raleway);f
+}
+
+main {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    max-width: 100vw;
+}
+
+h1 {
+    font-size: var(--space-xl);
+    color: var(--yelliced);
+}
+
+h1:hover {
+    cursor: pointer;
+}
+
+h2 {
+    font-weight:400;
+    font-size: var(--space-l)/2;
+    color: var(--glass);
+    margin-block-start: 0;
+    margin-block-end: var(--space-l);
+}
+
+input {
+    font-family: var(--raleway);
+    font-size: var(--space-m);
+    width: 60vw;
+    line-height: var(--space-m);
+    cursor: text;
+    vertical-align: middle;
+}
+
+button {
+    background: var(--blueberry);
+    border: none;
+    line-height: var(--space-m);
+    cursor: pointer;
+    font-size: 2rem;
+    vertical-align: middle;
+    padding-left: var(--space-s);
+}
+
+.fa-search {
+    color: var(--mystic);
+}
+
+.fa-search:hover {
+    color: var(--go);
+    transition: 0.2s ease-in-out;
+    transform: scale(1.07);
+}
+
+
+
+/* media queries */
+@media (min-width: 768px) {
+
+
+h1 {
+    font-size: var(--space-xxl);
+    margin-top: 10rem;
+} 
+
+h2 {
+    font-size: var(--space-l);
+    margin-block-end: var(--space-xl);
+} 
+
+
+input {
+    width: 39vw;
+    line-height: var(--space-l);
+    font-size-adjust: ;
+}
+
+}
