@@ -1,6 +1,6 @@
 const suggestions = document.querySelector(".suggestions");
 
-currentMatches = ["Germany", "Italy", "Paraguay", "Sweden", "UK"];
+//currentMatches = ["Germany", "Italy", "Paraguay", "Sweden", "UK"];
 
 const createList = () => {
     currentMatches.forEach( x => {

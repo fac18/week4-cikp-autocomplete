@@ -26,10 +26,4 @@ const api = () => {
     xhr.send();
 };
 
-<<<<<<< HEAD
 inputBox.addEventListener("input", api);
-
-||||||| merged common ancestors
-=======
-inputBox.addEventListener("input", api);
->>>>>>> master
