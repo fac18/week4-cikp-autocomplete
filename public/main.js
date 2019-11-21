@@ -1,10 +1,9 @@
 const suggestions = document.querySelector(".suggestions");
-
-//currentMatches = ["Germany", "Italy", "Paraguay", "Sweden", "UK"];
+let children = document.getElementsByTagName("li");
 
 const createList = () => {
+    killAllChildren();
     currentMatches.forEach( x => {
-        console.log(currentMatches);
         let createListItem = document.createElement('li');
         let suggestionItem = document.createTextNode(x);
         createListItem.appendChild(suggestionItem);
@@ -12,4 +11,10 @@ const createList = () => {
     })
 }
 
-createList();
+const killAllChildren = () => {    
+    console.log("Killing all children");
+    console.log("Here are children: ", children);
+    while (suggestions.firstChild) {
+        suggestions.removeChild(suggestions.firstChild);
+    }
+}
