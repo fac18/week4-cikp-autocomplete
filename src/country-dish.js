@@ -1,4 +1,4 @@
- const countryDish = {
+const countryDish = {
 "Afghanistan": "Kabuli Palaw",
 "Albania": "Tavë kosi",
 "Algeria": "Couscous",
