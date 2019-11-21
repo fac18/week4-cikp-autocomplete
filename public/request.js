@@ -1,7 +1,6 @@
 
 // inputBox is our search bar. It waits for an input and runs api function each time.
 const inputBox = document.querySelector('input[name="autocomplete"]');
-inputBox.addEventListener("input", api);
 let currentMatches = [];
 
 
@@ -16,11 +15,15 @@ const api = () => {
             // Response comes back so...
             // Populate the currentmatches array with parsed response
             currentMatches = JSON.parse(xhr.responseText);
+            console.log(currentMatches);
             // append current matches to DOM -- call function here.
+            createList(currentMatches);
         }
     };
     // Send the search term over to our server
     xhr.open("GET", updatedSearch, true);
     xhr.send();
 };
+
+inputBox.addEventListener("input", api);
 
