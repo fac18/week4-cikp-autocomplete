@@ -1,6 +1,8 @@
 const fs = require('fs');
 // const querystring = require('querystring');
 const path = require('path');
+const countryDish = require('./country-dish');
+
 
 
 const handleHome = (request, response) => {
@@ -45,7 +47,14 @@ const handleAll = (request, response) => {
         // console.log(endpoint);
 }
 
-const handleSearch = (request, response) => {
+const handleSearch = (request, response, endpoint) => {
+    console.log({endpoint});
+    let searchStr = endpoint.split('=')[1];
+    console.log("this is search field", searchStr);
+    let countryArr = Object.keys(countryDish);
+    // console.log('this is array', countryArr);
+    let result = countryArr.filter(country => country.includes(searchStr));
+    console.log(result);
     // If the endpoint given into the api request function includes the word search... 
     // ...then the search url should come here as e.g. /search?q=germany
     // We need to take only the part of the search term after the q. (querystrings?)
@@ -54,8 +63,6 @@ const handleSearch = (request, response) => {
     // Possibly with filter(Object.keys(countryDish))...
     // Then we need to JSON stringify that result so it can be passed back...
     // ...as a response to the API and front end for DOM manipulation.
-
-
     response.writeHead(200, { "content-type": "application/json" });
     response.end(JSON.stringify(result));
 }
