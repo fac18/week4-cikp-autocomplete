@@ -1,10 +1,15 @@
-// const api = import("./public/request.js");
+const suggestions = document.querySelector(".suggestions");
 
+//currentMatches = ["Germany", "Italy", "Paraguay", "Sweden", "UK"];
 
-// import { api } from './public/request.js';
+const createList = () => {
+    currentMatches.forEach( x => {
+        console.log(currentMatches);
+        let createListItem = document.createElement('li');
+        let suggestionItem = document.createTextNode(x);
+        createListItem.appendChild(suggestionItem);
+        suggestions.appendChild(createListItem);
+    })
+}
 
-
-// window.onload = api();
-
-//once the search bar has a full country inside it, we can use the submit button to get the 
-// the relevant value from src/country-dish and use DOM to do further functionality.
+createList();

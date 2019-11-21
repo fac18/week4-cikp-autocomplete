@@ -14,14 +14,16 @@
     <main>
     <h1>WTF: Where's The Food? 🍋</h1>
     <h2>Discover the national dishes of the countries of the world</h2>
+    <section class="searchbar">
     <form action="" aria-label="autocomplete country-dish search">
         <input type="text" name="autocomplete" aria-label="text field" placeholder="Search for a country" required>
         <button type="submit" aria-label="search button">
             <i class="fas fa-search"></i>
         </button>
     </form> 
-
-    <!-- <script src="/public/countryDish.json"></script>-->
+    <ul class="suggestions"></ul>
+    </section>
+    
     <script src="/public/request.js"></script> 
     <script src="/public/main.js"></script>
     
