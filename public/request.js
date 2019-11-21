@@ -16,7 +16,9 @@ const api = () => {
             // Response comes back so...
             // Populate the currentmatches array with parsed response
             currentMatches = JSON.parse(xhr.responseText);
+            console.log(currentMatches);
             // append current matches to DOM -- call function here.
+            createList(currentMatches);
         }
     };
     // Send the search term over to our server
@@ -24,4 +26,10 @@ const api = () => {
     xhr.send();
 };
 
+<<<<<<< HEAD
 inputBox.addEventListener("input", api);
+
+||||||| merged common ancestors
+=======
+inputBox.addEventListener("input", api);
+>>>>>>> master

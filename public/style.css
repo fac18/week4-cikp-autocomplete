@@ -50,8 +50,15 @@ main {
     justify-content: center;
 }
 
+.searchbar {
+    width: 45vw;
+    border:0;
+    padding:0;
+    margin:0;
+}
+
 form {
-    max-width: 100vw;
+    max-width: 100%;
 }
 
 h1 {
@@ -74,10 +81,15 @@ h2 {
 input {
     font-family: var(--raleway);
     font-size: var(--space-m);
-    width: 60vw;
+    color: var(--glass);
+    /*width: 60vw;*/
     line-height: var(--space-m);
     cursor: text;
     vertical-align: middle;
+}
+
+input:focus {
+    transform: scale(1.2);
 }
 
 button {
@@ -98,6 +110,36 @@ button {
     color: var(--go);
     transition: 0.2s ease-in-out;
     transform: scale(1.07);
+}
+
+ul {
+    list-style-type: none;
+    padding:0;
+    margin:0;
+}
+
+li {
+    font-family: var(--raleway);
+    font-size: var(--space-m);
+    /*width: 60vw; */
+    text-align: left;
+    padding:0.5rem;
+    background-color: white;
+    line-height: var(--space-m);
+    curson: pointer;
+    color: var(--blueberry);
+}
+
+li:hover {
+    font-family: var(--raleway);
+    font-size: var(--space-m);
+    /*width: 60vw; */
+    text-align: left;
+    padding:0.5rem;
+    line-height: var(--space-m);
+    curson: pointer;
+    color: var(--blueberry);
+    background-color: var(--yelliced);
 }
 
 
