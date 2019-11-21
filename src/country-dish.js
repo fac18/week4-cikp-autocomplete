@@ -1,4 +1,4 @@
- {
+ const countryDish = {
 "Afghanistan": "Kabuli Palaw",
 "Albania": "Tavë kosi",
 "Algeria": "Couscous",
@@ -203,4 +203,6 @@
 "Yemen": "Kabsa",
 "Zambia": "Nshima",
 "Zimbabwe": "Sadza"
-}
+};
+
+module.exports = countryDish;

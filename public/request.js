@@ -1,22 +1,26 @@
 
+// inputBox is our search bar. It waits for an input and runs api function each time.
+const inputBox = document.querySelector('input[name="autocomplete"]');
+inputBox.addEventListener("input", api);
+let currentMatches = [];
+
+
 const api = () => {
-    const xhr = new XMLHttpRequest();
+    //grab the value in the input box
+    let currentInput = inputBox.value;
+    let xhr = new XMLHttpRequest();
+    // make a file path using the search prefix and our input value
+    let updatedSearch = "/search?q=" + currentInput;
     xhr.onreadystatechange = () => {
-        if(xhr.readyState == 4 && xhr.status == 200) {
-            const countryDish = JSON.parse(xhr.responseText);
-            console.log("XHR response: ",xhr.response);
-            console.log("Dish: ", countryDish);
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            // Response comes back so...
+            // Populate the currentmatches array with parsed response
+            currentMatches = JSON.parse(xhr.responseText);
+            // append current matches to DOM -- call function here.
         }
     };
-    
-    // handle the api call with a specific handler and "/search" as an endpoint 
-    xhr.open('GET', './public/countryDish.json', true);
+    // Send the search term over to our server
+    xhr.open("GET", updatedSearch, true);
     xhr.send();
-    
-    }
+};
 
-
-
-
-// module.exports = api
-// export {api};
