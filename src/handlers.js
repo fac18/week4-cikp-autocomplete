@@ -53,7 +53,7 @@ const handleSearch = (request, response, endpoint) => {
     console.log("this is search field", searchStr);
     let countryArr = Object.keys(countryDish);
     // console.log('this is array', countryArr);
-    let result = countryArr.filter(country => country.includes(searchStr));
+    let result = countryArr.filter(country => country.toLowerCase().includes(searchStr));
     console.log(result);
     // If the endpoint given into the api request function includes the word search... 
     // ...then the search url should come here as e.g. /search?q=germany
