@@ -12,14 +12,15 @@ const api = () => {
     let currentInput = inputBox.value;
     let xhr = new XMLHttpRequest();
     // make a file path using the search prefix and our input value
-    let updatedSearch = "/search?q=" + currentInput;
-    console.log(updatedSearch);
+    let searchConcat = "/search?q=" + currentInput;
+    let updatedSearch = searchConcat.toLowerCase();
+    // console.log(updatedSearch);
     xhr.onreadystatechange = () => {
         if (xhr.readyState == 4 && xhr.status == 200) {
             // Response comes back so...
             // Populate the currentmatches array with parsed response
             currentMatches = JSON.parse(xhr.responseText);
-            console.log(currentMatches);
+            // console.log("currentMatches = ", currentMatches);
             // append current matches to DOM -- call function here.
             createList(currentMatches);
         }
