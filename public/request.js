@@ -5,6 +5,9 @@ let currentMatches = [];
 
 
 const api = () => {
+    if (inputBox.value === "") {
+        killAllChildren();
+    } else {
     //grab the value in the input box
     let currentInput = inputBox.value;
     let xhr = new XMLHttpRequest();
@@ -24,6 +27,7 @@ const api = () => {
     // Send the search term over to our server
     xhr.open("GET", updatedSearch, true);
     xhr.send();
+}
 };
 
 inputBox.addEventListener("input", api);
