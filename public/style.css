@@ -4,7 +4,7 @@
     --blueberry: #284465;
     --yelliced: #f2d655;
     --mystic: #78f06d;
-    --go: #49ca3e;
+    --fey: #f5d4e3;
     --whiteout: white;
 
     /* spacing variables: golden ratio */
@@ -110,9 +110,9 @@ button {
 }
 
 .fa-search:hover {
-    color: var(--go);
+    color: var(--glass);
     transition: 0.2s ease-in-out;
-    transform: scale(1.07);
+    transform: scale(1.08);
 }
 
 ul {
@@ -160,7 +160,11 @@ li:hover {
 h1 {
     font-size: var(--space-xxl);
     margin-top: var(--space-xl) ;
-} 
+}
+
+h1:hover {
+    color: var(--fey);   
+}
 
 h2 {
     font-size: var(--space-l);
@@ -170,6 +174,14 @@ h2 {
 p {
     font-size: var(--space-xxl);
 }
+
+a {
+    text-decoration: none;
+}
+
+/* a:hover {
+    color: var(--glass);
+} */
 
 input {
     /* width: 39vw; */
