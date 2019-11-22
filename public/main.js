@@ -6,9 +6,9 @@ let countrySubmitted = document.querySelector(".input-field");
 
 const createList = () => {
     killAllChildren();
-    currentMatches.forEach( x => {
+    currentMatches.forEach( listItem => {
         let createListItem = document.createElement('li');
-        let suggestionItem = document.createTextNode(x);
+        let suggestionItem = document.createTextNode(listItem);
         createListItem.appendChild(suggestionItem);
         createListItem.addEventListener('click', selectAutocomplete);
         suggestions.appendChild(createListItem);
@@ -30,11 +30,13 @@ const selectAutocomplete = (event) => {
 // produce result upon submit
 const createCountryDish = () => {
     killDishChildren();
-        let finalCountry = countrySubmitted.value;
-        let paraCountryDish = document.createElement("p");
-        let nodePara = document.createTextNode(`${finalCountry} 's national dish is ${finalDish}`);
-        paraCountryDish.appendChild(nodePara);
-        countryDishSection.appendChild(paraCountryDish);
+    let finalCountry = countrySubmitted.value;
+    let paraCountryDish = document.createElement("p");
+    let nodePara = document.createTextNode(`${finalCountry}'s national dish is ${finalDish}`);
+    paraCountryDish.appendChild(nodePara);
+    countryDishSection.appendChild(paraCountryDish);
+    killAllChildren();
+    inputBox.value = "";
     }
 
 const killDishChildren = () => {
