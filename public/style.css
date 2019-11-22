@@ -174,11 +174,11 @@ p {
 input {
     /* width: 39vw; */
     line-height: var(--space-l);
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
 }
 
 .suggestions {
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
 }
 
 .country-dish {
