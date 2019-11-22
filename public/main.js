@@ -6,9 +6,9 @@ let countrySubmitted = document.querySelector(".input-field");
 
 const createList = () => {
     killAllChildren();
-    currentMatches.forEach( x => {
+    currentMatches.forEach( listItem => {
         let createListItem = document.createElement('li');
-        let suggestionItem = document.createTextNode(x);
+        let suggestionItem = document.createTextNode(listItem);
         createListItem.appendChild(suggestionItem);
         createListItem.addEventListener('click', selectAutocomplete);
         suggestions.appendChild(createListItem);
