@@ -1,4 +1,3 @@
-// const inputBox = document.querySelector('input[name="autocomplete"]');
 const suggestions = document.querySelector(".suggestions");
 const children = document.getElementsByTagName("li");
 const countryDishSection = document.querySelector(".country-dish");

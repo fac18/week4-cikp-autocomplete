@@ -14,13 +14,11 @@ const api = () => {
     // make a file path using the search prefix and our input value
     let searchConcat = "/search?q=" + currentInput;
     let updatedSearch = searchConcat.toLowerCase();
-    // console.log(updatedSearch);
     xhr.onreadystatechange = () => {
         if (xhr.readyState == 4 && xhr.status == 200) {
             // Response comes back so...
             // Populate the currentmatches array with parsed response
             currentMatches = JSON.parse(xhr.responseText);
-            // console.log("currentMatches = ", currentMatches);
             // append current matches to DOM -- call function here.
             createList(currentMatches);
         }
@@ -40,15 +38,10 @@ inputBox.addEventListener("input", api);
         console.log(country);
         xhr.onreadystatechange = () => {
             if (xhr.readyState == 4 && xhr.status == 200) {
-                // Response comes back so...
-                // Populate the currentmatches array with parsed response
-                console.log("finaldish in request: ", finalDish);
                 finalDish = JSON.parse(xhr.responseText);
-                console.log(finalDish);
                 createCountryDish(finalDish);
             }
         };
-        // Send the search term over to our server
         xhr.open("GET", submittedCountry, true);
         xhr.send();
     }
