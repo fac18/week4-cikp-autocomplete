@@ -32,7 +32,7 @@ const createCountryDish = () => {
     killDishChildren();
     let finalCountry = countrySubmitted.value;
     let paraCountryDish = document.createElement("p");
-    let nodePara = document.createTextNode(finalCountry + "'s national dish is " + finalDish);
+    let nodePara = document.createTextNode(`${finalCountry}'s national dish is ${finalDish}`);
     paraCountryDish.appendChild(nodePara);
     countryDishSection.appendChild(paraCountryDish);
     killAllChildren();
