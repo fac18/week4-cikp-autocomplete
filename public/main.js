@@ -29,6 +29,7 @@ const selectAutocomplete = (event) => {
 
 // produce result upon submit
 const createCountryDish = () => {
+    killDishChildren();
         let finalCountry = countrySubmitted.value;
         let paraCountryDish = document.createElement("p");
         let nodePara = document.createTextNode(finalCountry + "'s national dish is " + finalDish);
@@ -36,5 +37,10 @@ const createCountryDish = () => {
         countryDishSection.appendChild(paraCountryDish);
     }
 
+const killDishChildren = () => {
+    while (countryDishSection.firstChild) {
+        countryDishSection.removeChild(countryDishSection.firstChild);
+    }
+}
 
 
