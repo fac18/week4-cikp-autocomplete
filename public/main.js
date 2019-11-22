@@ -30,11 +30,13 @@ const selectAutocomplete = (event) => {
 // produce result upon submit
 const createCountryDish = () => {
     killDishChildren();
-        let finalCountry = countrySubmitted.value;
-        let paraCountryDish = document.createElement("p");
-        let nodePara = document.createTextNode(finalCountry + "'s national dish is " + finalDish);
-        paraCountryDish.appendChild(nodePara);
-        countryDishSection.appendChild(paraCountryDish);
+    let finalCountry = countrySubmitted.value;
+    let paraCountryDish = document.createElement("p");
+    let nodePara = document.createTextNode(finalCountry + "'s national dish is " + finalDish);
+    paraCountryDish.appendChild(nodePara);
+    countryDishSection.appendChild(paraCountryDish);
+    killAllChildren();
+    inputBox.value = "";
     }
 
 const killDishChildren = () => {
