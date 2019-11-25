@@ -103,6 +103,9 @@ button {
     padding-left: var(--space-s);
 }
 
+button:hover {
+}
+
 .fa-search {
     color: var(--mystic);
 }
@@ -110,7 +113,9 @@ button {
 .fa-search:hover {
     color: var(--glass);
     transition: 0.2s ease-in-out;
-    transform: scale(1.08);
+    /* transform: scale(1.08); */
+    transform: rotate(360deg) scale(1.08);
+
 }
 
 ul {
