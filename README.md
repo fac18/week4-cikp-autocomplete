@@ -28,7 +28,7 @@
 
 ### To run our site:
 
-[Heroku link - currently not working](https://wtf-wheres-the-food.herokuapp.com/)
+[Heroku link](https://wtf-wheres-the-food.herokuapp.com/)
 Otherwise:
 * Clone the Github repo
 * navigate to repo folder
